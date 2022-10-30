@@ -46,7 +46,6 @@
         - [657.xz_s](#657xz_s)
             + [構建](#構建-11)
             + [執行](#執行-11)
-+ [Deprecated](#deprecated)
 + [SPEC CPU®2006](#spec-cpu2006)
 
 <!-- vim-markdown-toc -->
@@ -343,34 +342,6 @@ cd benchspec/CPU/657.xz_s/run/run_base_test_mytest-64.0000
 ./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e
 ./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4
 ./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4
-```
-
-# Deprecated
-
-```zsh
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/600.perlbench_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/602.gcc_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/605.mcf_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/619.lbm_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/620.omnetpp_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/623.xalancbmk_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/625.x264_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/631.deepsjeng_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/638.imagick_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/641.leela_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/644.nab_s ~/Downloads/SpecCpu2017 //
-
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/657.xz_s ~/Downloads/SpecCpu2017 //
 ```
 
 # SPEC CPU®2006
