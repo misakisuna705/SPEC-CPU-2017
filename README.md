@@ -47,10 +47,6 @@
             + [構建](#構建-11)
             + [執行](#執行-11)
 + [Deprecated](#deprecated)
-+ [Deprecated](#deprecated-1)
-+ [Deprecated](#deprecated-2)
-+ [Deprecated](#deprecated-3)
-+ [Deprecated](#deprecated-4)
 + [SPEC CPU®2006](#spec-cpu2006)
 
 <!-- vim-markdown-toc -->
@@ -93,7 +89,7 @@ sudo umount /mnt
 ```zsh
 cd speccpu2017
 
-cp config/Example-gcc-linux-x86.cfg config/test.cfg
+cp -f config/Example-gcc-linux-aarch64.cfg config/test.cfg
 
 which aarch64-linux-gnu-gcc aarch64-linux-gnu-g++
 ```
@@ -122,11 +118,11 @@ runcpu -D -c test.cfg -i test -n 1 600.perlbench_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/600.perlbench_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/600.perlbench_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./perlbench_s_base.mytest-m64 -I. -I./lib makerand.pl
-./perlbench_s_base.mytest-m64 -I. -I./lib test.pl
+./perlbench_s_base.mytest-64 -I. -I./lib makerand.pl
+./perlbench_s_base.mytest-64 -I. -I./lib test.pl
 ```
 
 ### 602.gcc_s（Deprecated）
@@ -142,10 +138,10 @@ runcpu -D -c test.cfg -i test -n 1 602.gcc_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/602.gcc_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/602.gcc_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./sgcc_base.mytest-m64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s
+./sgcc_base.mytest-64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s
 ```
 
 ### 605.mcf_s
@@ -161,10 +157,10 @@ runcpu -D -c test.cfg -i test -n 1 605.mcf_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/605.mcf_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/605.mcf_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./mcf_s_base.mytest-m64 inp.in
+./mcf_s_base.mytest-64 inp.in
 ```
 
 ### 619.lbm_s
@@ -180,10 +176,10 @@ runcpu -D -c test.cfg -i test -n 1 619.lbm_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/619.lbm_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/619.lbm_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./lbm_s_base.mytest-m64 20 reference.dat 0 1 200_200_260_ldc.of
+./lbm_s_base.mytest-64 20 reference.dat 0 1 200_200_260_ldc.of
 ```
 
 ### 620.omnetpp_s
@@ -199,10 +195,10 @@ runcpu -D -c test.cfg -i test -n 1 620.omnetpp_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/620.omnetpp_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/620.omnetpp_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./omnetpp_s_base.mytest-m64 -c General -r 0
+./omnetpp_s_base.mytest-64 -c General -r 0
 ```
 
 ### 623.xalancbmk_s
@@ -218,10 +214,10 @@ runcpu -D -c test.cfg -i test -n 1 623.xalancbmk_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/623.xalancbmk_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/623.xalancbmk_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./xalancbmk_s_base.mytest-m64 -v test.xml xalanc.xsl
+./xalancbmk_s_base.mytest-64 -v test.xml xalanc.xsl
 ```
 
 ### 625.x264_s
@@ -237,10 +233,10 @@ runcpu -D -c test.cfg -i test -n 1 625.x264_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/625.x264_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/625.x264_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./x264_s_base.mytest-m64 --dumpyuv 50 --frames 156 -o BuckBunny_New.264 BuckBunny.yuv 1280x720
+./x264_s_base.mytest-64 --dumpyuv 50 --frames 156 -o BuckBunny_New.264 BuckBunny.yuv 1280x720
 ```
 
 ### 631.deepsjeng_s
@@ -256,10 +252,10 @@ runcpu -D -c test.cfg -i test -n 1 631.deepsjeng_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/631.deepsjeng_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/631.deepsjeng_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./deepsjeng_s_base.mytest-m64 test.txt
+./deepsjeng_s_base.mytest-64 test.txt
 ```
 
 ### 638.imagick_s
@@ -275,10 +271,10 @@ runcpu -D -c test.cfg -i test -n 1 638.imagick_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/638.imagick_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/638.imagick_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./imagick_s_base.mytest-m64 -limit disk 0 test_input.tga -shear 25 -resize 640x480 -negate -alpha Off test_output.tga
+./imagick_s_base.mytest-64 -limit disk 0 test_input.tga -shear 25 -resize 640x480 -negate -alpha Off test_output.tga
 ```
 
 ### 641.leela_s
@@ -294,10 +290,10 @@ runcpu -D -c test.cfg -i test -n 1 641.leela_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/641.leela_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/641.leela_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./leela_s_base.mytest-m64 test.sgf
+./leela_s_base.mytest-64 test.sgf
 ```
 
 ### 644.nab_s
@@ -313,10 +309,10 @@ runcpu -D -c test.cfg -i test -n 1 644.nab_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/644.nab_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/644.nab_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./nab_s_base.mytest-m64 hkrdenq 1930344093 1000
+./nab_s_base.mytest-64 hkrdenq 1930344093 1000
 ```
 
 ### 657.xz_s
@@ -332,43 +328,49 @@ runcpu -D -c test.cfg -i test -n 1 657.xz_s
 #### 執行
 
 ```zsh
-cd benchspec/CPU/657.xz_s/run/run_base_test_mytest-m64.0000
+cd benchspec/CPU/657.xz_s/run/run_base_test_mytest-64.0000
 
 # specinvoke -n
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4
-./xz_s_base.mytest-m64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4
+./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4
 ```
 
 # Deprecated
 
-# Deprecated
-
-# Deprecated
-
-# Deprecated
-
-# Deprecated
-
 ```zsh
-runcpu --fake --config test.cfg --size test --tune base --iterations=1 600.perlbench_s
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/600.perlbench_s ~/Downloads/SpecCpu2017 //
 
-cd benchspec/CPU/600.perlbench_s/build/build_base_mytest-64.0000
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/602.gcc_s ~/Downloads/SpecCpu2017 //
 
-runspec --action run --config ft-rate-s2500-int.cfg --size test --tune base --iterations=1 400.perlbench
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/605.mcf_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/619.lbm_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/620.omnetpp_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/623.xalancbmk_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/625.x264_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/631.deepsjeng_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/638.imagick_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/641.leela_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/644.nab_s ~/Downloads/SpecCpu2017 //
+
+scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/657.xz_s ~/Downloads/SpecCpu2017 //
 ```
 
 # SPEC CPU®2006
-
-```zsh
-scp -r misakisuna@192.168.30.34:~/speccpu2017/benchspec/CPU/602.gcc_s ~/Downloads/SpecCpu2017
-```
