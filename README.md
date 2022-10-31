@@ -89,8 +89,6 @@ sudo umount /mnt
 cd speccpu2017
 
 cp -f config/Example-gcc-linux-aarch64.cfg config/test.cfg
-
-which aarch64-linux-gnu-gcc aarch64-linux-gnu-g++
 ```
 
 -   config/test.cfg
@@ -119,9 +117,10 @@ runcpu -D -c test.cfg -i test -n 1 600.perlbench_s
 ```zsh
 cd benchspec/CPU/600.perlbench_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./perlbench_s_base.mytest-64 -I. -I./lib makerand.pl
-./perlbench_s_base.mytest-64 -I. -I./lib test.pl
+touch ./600.perlbench_s.sh && chmod u+x ./600.perlbench_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./600.perlbench_s.sh
+
+./600.perlbench_s.sh
 ```
 
 ### 602.gcc_s（Deprecated）
@@ -139,8 +138,10 @@ runcpu -D -c test.cfg -i test -n 1 602.gcc_s
 ```zsh
 cd benchspec/CPU/602.gcc_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./sgcc_base.mytest-64 t1.c -O3 -finline-limit=50000 -o t1.opts-O3_-finline-limit_50000.s
+touch ./602.gcc_s.sh && chmod u+x ./602.gcc_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./602.gcc_s.sh
+
+./602.gcc_s.sh
 ```
 
 ### 605.mcf_s
@@ -158,8 +159,10 @@ runcpu -D -c test.cfg -i test -n 1 605.mcf_s
 ```zsh
 cd benchspec/CPU/605.mcf_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./mcf_s_base.mytest-64 inp.in
+touch ./605.mcf_s.sh && chmod u+x ./605.mcf_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./605.mcf_s.sh
+
+./605.mcf_s.sh
 ```
 
 ### 619.lbm_s
@@ -177,8 +180,10 @@ runcpu -D -c test.cfg -i test -n 1 619.lbm_s
 ```zsh
 cd benchspec/CPU/619.lbm_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./lbm_s_base.mytest-64 20 reference.dat 0 1 200_200_260_ldc.of
+touch ./619.lbm_s.sh && chmod u+x ./619.lbm_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./619.lbm_s.sh
+
+./619.lbm_s.sh
 ```
 
 ### 620.omnetpp_s
@@ -196,8 +201,10 @@ runcpu -D -c test.cfg -i test -n 1 620.omnetpp_s
 ```zsh
 cd benchspec/CPU/620.omnetpp_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./omnetpp_s_base.mytest-64 -c General -r 0
+touch ./620.omnetpp_s.sh && chmod u+x ./620.omnetpp_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./620.omnetpp_s.sh
+
+./620.omnetpp_s.sh
 ```
 
 ### 623.xalancbmk_s
@@ -215,8 +222,10 @@ runcpu -D -c test.cfg -i test -n 1 623.xalancbmk_s
 ```zsh
 cd benchspec/CPU/623.xalancbmk_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./xalancbmk_s_base.mytest-64 -v test.xml xalanc.xsl
+touch ./623.xalancbmk_s.sh && chmod u+x ./623.xalancbmk_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./623.xalancbmk_s.sh
+
+./623.xalancbmk_s.sh
 ```
 
 ### 625.x264_s
@@ -234,8 +243,10 @@ runcpu -D -c test.cfg -i test -n 1 625.x264_s
 ```zsh
 cd benchspec/CPU/625.x264_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./x264_s_base.mytest-64 --dumpyuv 50 --frames 156 -o BuckBunny_New.264 BuckBunny.yuv 1280x720
+touch ./625.x264_s.sh && chmod u+x ./625.x264_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./625.x264_s.sh
+
+./625.x264_s.sh
 ```
 
 ### 631.deepsjeng_s
@@ -253,8 +264,10 @@ runcpu -D -c test.cfg -i test -n 1 631.deepsjeng_s
 ```zsh
 cd benchspec/CPU/631.deepsjeng_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./deepsjeng_s_base.mytest-64 test.txt
+touch ./631.deepsjeng_s.sh && chmod u+x ./631.deepsjeng_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./631.deepsjeng_s.sh
+
+./631.deepsjeng_s.sh
 ```
 
 ### 638.imagick_s
@@ -272,8 +285,10 @@ runcpu -D -c test.cfg -i test -n 1 638.imagick_s
 ```zsh
 cd benchspec/CPU/638.imagick_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./imagick_s_base.mytest-64 -limit disk 0 test_input.tga -shear 25 -resize 640x480 -negate -alpha Off test_output.tga
+touch ./638.imagick_s.sh && chmod u+x ./638.imagick_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./638.imagick_s.sh
+
+./638.imagick_s.sh
 ```
 
 ### 641.leela_s
@@ -291,8 +306,10 @@ runcpu -D -c test.cfg -i test -n 1 641.leela_s
 ```zsh
 cd benchspec/CPU/641.leela_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./leela_s_base.mytest-64 test.sgf
+touch ./641.leela_s.sh && chmod u+x ./641.leela_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./641.leela_s.sh
+
+./641.leela_s.sh
 ```
 
 ### 644.nab_s
@@ -310,8 +327,10 @@ runcpu -D -c test.cfg -i test -n 1 644.nab_s
 ```zsh
 cd benchspec/CPU/644.nab_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./nab_s_base.mytest-64 hkrdenq 1930344093 1000
+touch ./644.nab_s.sh && chmod u+x ./644.nab_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./644.nab_s.sh
+
+./644.nab_s.sh
 ```
 
 ### 657.xz_s
@@ -329,19 +348,10 @@ runcpu -D -c test.cfg -i test -n 1 657.xz_s
 ```zsh
 cd benchspec/CPU/657.xz_s/run/run_base_test_mytest-64.0000
 
-# specinvoke -n
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1548636 1555348 0
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1462248 -1 1
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1428548 -1 2
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034828 -1 3e
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1061968 -1 4
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 4 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 1034588 -1 4e
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 650156 -1 0
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 639996 -1 1
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 637616 -1 2
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 628996 -1 3e
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 631912 -1 4
-./xz_s_base.mytest-64 cpu2006docs.tar.xz 1 055ce243071129412e9dd0b3b69a21654033a9b723d874b2015c774fac1553d9713be561ca86f74e4f16f22e664fc17a79f30caa5ad2c04fbc447549c2810fae 629064 -1 4
+touch ./657.xz_s.sh && chmod u+x ./657.xz_s.sh
+specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./657.xz_s.sh
+
+./657.xz_s.sh
 ```
 
 # SPEC CPU®2006
