@@ -13,7 +13,7 @@
     - [600.perlbench_s](#600perlbench_s)
         + [構建](#構建)
         + [執行](#執行)
-    - [602.gcc_s（Deprecated）](#602gcc_sdeprecated)
+    - [602.gcc_s](#602gcc_s)
         + [構建](#構建-1)
         + [執行](#執行-1)
     - [605.mcf_s](#605mcf_s)
@@ -122,7 +122,7 @@ specinvoke -n *.cmd | grep ../ | cut -f1 -d">" >> ./600.perlbench_s.sh
 ./600.perlbench_s.sh
 ```
 
-### 602.gcc_s（Deprecated）
+### 602.gcc_s
 
 #### 構建
 
